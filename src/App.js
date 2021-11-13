@@ -1,9 +1,10 @@
+import { CustomCard } from "./components/cards/card";
 
 
 function App() {
   return (
     <div>
-      <h1>Hola mundo</h1>
+      <CustomCard/>
     </div>
   );
 }
