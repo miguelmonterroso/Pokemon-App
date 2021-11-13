@@ -1,10 +1,12 @@
 import React from 'react'
+import logo from '../../images/logo.png'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 export const Head = () => {
     return (
         <div className='container'>
-            <h1 className='menu'>soy la cabeza</h1>
-            
+            <img className='logo' src={logo} alt="logo" />
+            <FontAwesomeIcon/>
         </div>
     )
 }
