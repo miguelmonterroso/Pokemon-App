@@ -7,4 +7,6 @@ $light: #A8DADC;
 $extra: #457B9D;
 
 // Estilos para los distintos componentes
+@import '_reset.scss';
 @import '_app.scss';
+@import '_menu.scss';
