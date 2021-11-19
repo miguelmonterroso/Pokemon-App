@@ -3,6 +3,7 @@ import React, {useEffect, useState} from 'react'
 import { CustomCard } from './card';
 
 export const Api = () => {
+//  SE DECLARA EL ESTADO PARA QUE RECIBA LA INFORMACION DEL API
     const [info, setInfo] = useState({
         title:'',
         img:'',
@@ -10,6 +11,8 @@ export const Api = () => {
         tipo:[]
     })
     useEffect(() => {
+      //SE HACE LA CONSULTA AL API PARA OBTENER LA INFORMACION
+      // DEL POKEMON.
         var config = {
             method: 'get',
             url: 'https://pokeapi.co/api/v2/pokemon/2',
