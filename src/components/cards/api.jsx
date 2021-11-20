@@ -15,7 +15,7 @@ export const Api = () => {
       // DEL POKEMON.
         var config = {
             method: 'get',
-            url: 'https://pokeapi.co/api/v2/pokemon/2',
+            url: 'https://pokeapi.co/api/v2/pokemon/3',
             headers: { }
           };
           
