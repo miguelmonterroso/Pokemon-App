@@ -8,7 +8,7 @@ function App() {
     <div className='home'>
       <Head/>
       {/* <Api/> */}
-      {/* <GetPokemons/> */}
+      <GetPokemons/>
     </div>
   );
 }

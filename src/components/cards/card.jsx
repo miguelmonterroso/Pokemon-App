@@ -4,11 +4,10 @@ export const CustomCard = (props) => {
     return (
         <div className='cardContainer'>
             <div className='center'>
-                <h2>{props.title}</h2>
-                <img src={props.img} alt="pokeImage" />
-                <div className='peso'><h4>Peso:</h4><p>{props.peso}</p></div>
-            </div>
-            
+                <h2>{props.name}</h2>
+                <img src={props.image} alt="pokeImage" />
+                <div className='peso'><h4>Peso:</h4><p>{props.weight}</p></div>
+            </div>  
         </div>
     )
 }
