@@ -90,7 +90,6 @@ table {
   background: #457B9D;
   height: 300px;
   width: 240px;
-  margin-top: 20px;
   border-radius: 20px;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   transition-duration: 1500ms;
@@ -108,6 +107,7 @@ table {
 .cardContainer .center h2 {
   font-size: 25px;
   font-weight: bold;
+  margin-top: 20px;
 }
 .cardContainer .center img {
   width: 180px;
@@ -117,15 +117,31 @@ table {
 .cardContainer .center .peso {
   display: flex;
   font-size: 15px;
+  margin-top: -20px;
 }
-.cardContainer .center .btn {
+.cardContainer .center .btns {
+  display: flex;
+  margin-top: 20px;
+  width: 100%;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.cardContainer .center .btns .btn {
   background: #A8DADC;
   outline: none;
   border: none;
   height: 40px;
   width: 40%;
   border-radius: 20px;
-  margin-top: 20px;
+  transition-duration: 1000ms;
+}
+.cardContainer .center .btns .fav {
+  outline: none;
+  border: none;
+  background: #A8DADC;
+  width: 40px;
+  height: 40px;
+  border-radius: 20px;
   transition-duration: 1000ms;
 }
 
@@ -137,11 +153,34 @@ table {
   background: #E63946;
   color: #A8DADC;
 }
+.cardContainer:hover .fav:hover {
+  background: #E63946;
+  color: #A8DADC;
+}
 
-.grid {
+.container-pokemons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+.container-pokemons .grid {
   display: grid;
   justify-items: center;
   grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 25px;
+}
+.container-pokemons .btn {
+  background: #A8DADC;
+  outline: none;
+  border: none;
+  height: 40px;
+  width: 50%;
+  border-radius: 20px;
+  transition-duration: 1000ms;
+  margin-bottom: 25px;
+  margin-top: 25px;
+  max-width: 200px;
 }
 
 .render {

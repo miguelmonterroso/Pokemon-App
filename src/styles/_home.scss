@@ -1,8 +1,29 @@
-.grid{
-    display: grid;
-    justify-items: center;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+.container-pokemons{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+    .grid{
+        display: grid;
+        justify-items: center;
+        grid-template-columns:1fr 1fr 1fr 1fr ;
+        grid-gap:25px; 
+    }
+    .btn{
+        background: $light;
+        outline: none;
+        border: none;
+        height: 40px;
+        width: 50%;
+        border-radius: 20px;
+        transition-duration: 1000ms;
+        margin-bottom: 25px;
+        margin-top: 25px;
+        max-width: 200px;
+    }
 }
+
+
 .render{
    width: 100%;   
 }

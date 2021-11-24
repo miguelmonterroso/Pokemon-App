@@ -52,8 +52,12 @@ export const GetPokemons = () => {
     })
 
     return (
-        <div className='grid'>
-            {createCard}
+        <div className='container-pokemons'>
+            <div className='grid'>
+                {createCard}
+            </div>
+            <button className='btn'>Ver otros Pokemons</button>
         </div>
+        
     )
 }
