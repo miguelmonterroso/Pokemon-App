@@ -52,7 +52,7 @@ export const GetPokemons = () => {
     })
 
     return (
-        <div>
+        <div className='grid'>
             {createCard}
         </div>
     )

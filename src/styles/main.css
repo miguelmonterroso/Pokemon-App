@@ -87,12 +87,14 @@ table {
 }
 
 .cardContainer {
-  background: #A8DADC;
+  background: #457B9D;
   height: 300px;
   width: 240px;
   margin-top: 20px;
   border-radius: 20px;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  transition-duration: 1500ms;
+  color: #A8DADC;
 }
 .cardContainer .center {
   width: 100%;
@@ -115,4 +117,33 @@ table {
 .cardContainer .center .peso {
   display: flex;
   font-size: 15px;
+}
+.cardContainer .center .btn {
+  background: #A8DADC;
+  outline: none;
+  border: none;
+  height: 40px;
+  width: 40%;
+  border-radius: 20px;
+  margin-top: 20px;
+  transition-duration: 1000ms;
+}
+
+.cardContainer:hover {
+  background: #1D3557;
+  color: #A8DADC;
+}
+.cardContainer:hover .btn:hover {
+  background: #E63946;
+  color: #A8DADC;
+}
+
+.grid {
+  display: grid;
+  justify-items: center;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.render {
+  width: 100%;
 }/*# sourceMappingURL=main.css.map */

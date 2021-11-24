@@ -1,10 +1,12 @@
 .cardContainer{
-    background: $light;
+    background: $extra;
     height: 300px;
     width: 240px;
     margin-top: 20px;
     border-radius: 20px;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    transition-duration: 1500ms;
+    color: $light;
     .center{
         width: 100%;
         height: 100%;
@@ -25,5 +27,25 @@
             display: flex;
             font-size: 15px;
         }
+        .btn{
+            background: $light;
+            outline: none;
+            border: none;
+            height: 40px;
+            width: 40%;
+            border-radius: 20px;
+            margin-top: 20px;
+            transition-duration: 1000ms;
+            
+        }
+    }
+}
+.cardContainer:hover{
+    background: $text;
+    color: $light;
+    .btn:hover{
+        background: $red;
+        color: $light;
+        
     }
 }

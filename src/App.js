@@ -1,14 +1,12 @@
-// import { Api } from "./components/cards/api";
-import { GetPokemons } from "./components/cards/getPokemos";
 import { Head } from "./components/menu/head";
+import { Home } from "./pages/home";
 import './styles/main.css'
 
 function App() {
   return (
     <div className='home'>
       <Head/>
-      {/* <Api/> */}
-      <GetPokemons/>
+      <Home/>
     </div>
   );
 }
