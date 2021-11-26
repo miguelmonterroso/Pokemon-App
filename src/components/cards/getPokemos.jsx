@@ -5,6 +5,13 @@ import { CustomCard } from './card'
 
 export const GetPokemons = () => {
     const [card, setCard] = React.useState([])
+    const [count, setCount] = React.useState(20)
+
+    const plus = () => {
+      setCount(count + 20)
+      morePokemons()
+    }
+    
     const getAllPokemons = () =>{
         var config = {
             method: 'get',
@@ -42,6 +49,46 @@ export const GetPokemons = () => {
             console.log(error);
           });
     }
+
+    const morePokemons = () => {
+      var config = {
+        method: 'get',
+        url: `https://pokeapi.co/api/v2/pokemon?offset=${count}&limit=20`,
+        headers: { }
+      };
+      
+      axios(config)
+      .then(function (response) {
+        const data = response.data.results
+        console.log(data);
+        data.map(function(element){
+          var config = {
+              method: 'get',
+              url: element.url,
+              headers: { }
+            };
+            
+            axios(config)
+            .then(function (response) {
+              const pokemon = response.data
+              const info = {
+                  name: pokemon.name,
+                  image: pokemon.sprites.front_default,
+                  weight: pokemon.weight
+              }
+              setCard(list => [...list, info])
+            })
+            .catch(function (error) {
+              console.log(error);
+            });
+          return true
+      })
+      })
+      .catch(function (error) {
+        console.log(error);
+      });
+      return
+    }
     
     React.useEffect(() => {
         getAllPokemons()
@@ -56,7 +103,7 @@ export const GetPokemons = () => {
             <div className='grid'>
                 {createCard}
             </div>
-            <button className='btn'>Ver otros Pokemons</button>
+            <button onClick={plus} className='btn'>Ver más</button>
         </div>
         
     )

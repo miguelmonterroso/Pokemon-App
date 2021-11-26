@@ -6,7 +6,7 @@
     .grid{
         display: grid;
         justify-items: center;
-        grid-template-columns:1fr 1fr 1fr 1fr ;
+        grid-template-columns:1fr 1fr 1fr 1fr;
         grid-gap:25px; 
     }
     .btn{
@@ -20,6 +20,7 @@
         margin-bottom: 25px;
         margin-top: 25px;
         max-width: 200px;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     }
 }
 

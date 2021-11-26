@@ -181,6 +181,7 @@ table {
   margin-bottom: 25px;
   margin-top: 25px;
   max-width: 200px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
 .render {
