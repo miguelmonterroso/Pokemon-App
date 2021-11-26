@@ -114,14 +114,8 @@ table {
   -o-object-fit: cover;
      object-fit: cover;
 }
-.cardContainer .center .peso {
-  display: flex;
-  font-size: 15px;
-  margin-top: -20px;
-}
 .cardContainer .center .btns {
   display: flex;
-  margin-top: 20px;
   width: 100%;
   justify-content: space-evenly;
   align-items: center;

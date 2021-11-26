@@ -95,7 +95,7 @@ export const GetPokemons = () => {
     }, [])
 
     const createCard = card.map((e,i)=>{
-        return <CustomCard key={i} name={e.name} image={e.image} weight={e.weight}/>
+        return <CustomCard key={i} name={e.name} image={e.image}/>
     })
 
     return (
