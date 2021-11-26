@@ -167,7 +167,7 @@ table {
 .container-pokemons .grid {
   display: grid;
   justify-items: center;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr;
   grid-gap: 25px;
 }
 .container-pokemons .btn {
