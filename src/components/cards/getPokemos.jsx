@@ -45,6 +45,7 @@ export const GetPokemons = () => {
                     const pokemon = response.data
                     const info = {
                       // accedemos a los elementos especificos que queremos renderizar
+                        id: pokemon.id,
                         name: pokemon.name,
                         image: pokemon.sprites.front_default,
                         weight: pokemon.weight
@@ -112,6 +113,7 @@ export const GetPokemons = () => {
               const pokemon = response.data
               const info = {
                 // accedemos a los elementos especificos que queremos renderizar
+                  id: pokemon.id,
                   name: pokemon.name,
                   image: pokemon.sprites.front_default,
                   weight: pokemon.weight
@@ -144,7 +146,7 @@ export const GetPokemons = () => {
     // en nuestro array card, este recibe un elemento (e) y un index (i)
     // retornamos el componente CustomCard con las respectivas props que esta esperando
     const createCard = card.map((e,i)=>{
-        return <CustomCard key={i} name={e.name} image={e.image}/>
+        return <CustomCard id={e.id} key={i} name={e.name} image={e.image}/>
     })
 
     // Retornamos lo que deseamos renderizar y le damos nuestros estilos a traves de las 
