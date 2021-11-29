@@ -2,6 +2,7 @@
 import React from 'react'
 import Swal from 'sweetalert2'
 import axios from 'axios'
+import 'animate.css';
 // Exportamos nuestra funcion CustomCard que recibe las props de la informacion que se
 // desea renderizar
 export const CustomCard = (props) => {
@@ -23,6 +24,14 @@ export const CustomCard = (props) => {
           .then(function (response) {
               // la guardamos en la constante data 
             const data = response.data
+            const getStats = data.stats.map((stat) => {
+                const name = stat.stat.name
+                const power = stat.base_stat
+                return {name: name, power: power}
+            })
+            
+            
+            console.log(getStats);
             //Utilizamos un alert de Sweet Alert para mostrar la informacion de cada pokemon
             Swal.fire({
                 //Aca va la informacion que deseamos mostrar
@@ -31,8 +40,14 @@ export const CustomCard = (props) => {
                 imageWidth: 150,
                 imageHeight: 150,
                 imageAlt: 'Pokemon image',
-                text: `Peso: ${data.weight}`,
-                confirmButtonText: 'Cool'
+                html: getStats,
+                confirmButtonText: 'Cool',
+                showClass: {
+                    popup: 'animate__animated animate__backInDown'
+                  },
+                  hideClass: {
+                    popup: 'animate__animated animate__backOutDown'
+                  }
               })
           })
 
@@ -40,6 +55,7 @@ export const CustomCard = (props) => {
           .catch(function (error) {
             console.log(error);
           });
+          
     }
     // retornamos lo que va a ser visualizado en pantalla
     // y accedemos a las props que nos enviara el componente getPokemos
