@@ -48,6 +48,7 @@ export const GetPokemons = () => {
                         id: pokemon.id,
                         name: pokemon.name,
                         image: pokemon.sprites.front_default,
+                        stats: pokemon.stats,
                         weight: pokemon.weight
                     }
                     // Los guardamos en nuestro estado con setCard, hacemos un array 
@@ -135,7 +136,6 @@ export const GetPokemons = () => {
       });
       return
     }
-    
     // Usamos el Hook useEffect para hacer la peticion en cuanto entramos a la pagina
     React.useEffect(() => {
       // Ejecutamos nuestra funcion para renderizar los primeros 20 pokemons
@@ -146,8 +146,9 @@ export const GetPokemons = () => {
     // en nuestro array card, este recibe un elemento (e) y un index (i)
     // retornamos el componente CustomCard con las respectivas props que esta esperando
     const createCard = card.map((e,i)=>{
-        return <CustomCard id={e.id} key={i} name={e.name} image={e.image}/>
+        return <CustomCard id={e.id} weight={e.weight} key={i} name={e.name} image={e.image} stats={e.stats}/>
     })
+    
 
     // Retornamos lo que deseamos renderizar y le damos nuestros estilos a traves de las 
     // clases
