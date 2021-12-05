@@ -182,8 +182,28 @@ table {
   width: 100%;
 }
 
-.stats {
+.modalCont {
   width: 75vw;
   max-width: 800px;
-  background: #b2dbbf;
+  height: 80vh;
+  font-family: sans-serif;
+  display: flex;
+  flex-direction: column;
+}
+.modalCont .modalName {
+  color: black;
+  font-size: 30px;
+  text-align: center;
+  font-weight: bold;
+}
+.modalCont .modalImage {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 150px;
+  height: auto;
+  align-self: center;
+}
+.modalCont .modalStats ul li p {
+  margin-bottom: 5px;
+  margin-top: 5px;
 }/*# sourceMappingURL=main.css.map */

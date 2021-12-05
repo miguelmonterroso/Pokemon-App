@@ -4,6 +4,7 @@ import React from 'react'
 // import 'animate.css';
 import 'react-responsive-modal/styles.css';
 import { Modal } from 'react-responsive-modal';
+import ProgressBar from 'react-bootstrap/ProgressBar'
 // Exportamos nuestra funcion CustomCard que recibe las props de la informacion que se
 // desea renderizar
 
@@ -38,15 +39,17 @@ export const CustomCard = (props) => {
                 <h2>{props.name}</h2>
                 <img src={props.image} alt="pokeImage" />
                 <Modal open={open} onClose={onCloseModal} classNames='espacio' center>
-                    <div className='stats'>
-                    <h2>{props.name}</h2>
-                    <div>
-                        {props.stats.map((e,k)=>{
-                        return <div key={k}>{e.stat.name}: {e.base_stat}</div>
-                        })}
+                    <div className='modalCont'>
+                        <h2 className='modalName'>{props.name}</h2>
+                        <img className='modalImage' src={props.image} alt="pokemon" />
+                        <div className='modalStats'>
+                            <ul>
+                                {props.stats.map((e,k)=>{
+                                return <li key={k}><p>{e.stat.name}:</p> <ProgressBar now={e.base_stat}/></li>
+                                })}
+                            </ul>
+                        </div>
                     </div>
-                    </div>
-                    
                 </Modal>
                 <div className='btns'>
                 <button onClick={onOpenModal} className='btn'>Más info</button>

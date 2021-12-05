@@ -29,8 +29,33 @@
    width: 100%;   
 }
 
-.stats{
+.modalCont{
     width: 75vw;
     max-width: 800px;
-    background: #b2dbbf;
+    height: 80vh;
+    font-family: sans-serif;
+    display: flex;
+    flex-direction: column;
+    .modalName{
+        color: black;
+        font-size: 30px;
+        text-align: center;
+        font-weight: bold;
+    }
+    .modalImage{
+        object-fit: cover;
+        width: 150px;
+        height: auto;
+        align-self: center;
+    }
+    .modalStats{
+        ul{
+            li{
+                p{
+                    margin-bottom: 5px;
+                    margin-top: 5px;
+                }
+            }
+        }
+    }
 }
