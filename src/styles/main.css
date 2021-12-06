@@ -66,6 +66,7 @@ table {
 
 .container {
   width: 100%;
+  max-width: 100vw;
   height: 80px;
   background: #E63946;
   display: flex;
@@ -152,19 +153,29 @@ table {
   color: #A8DADC;
 }
 
-.container-pokemons {
+.render {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.render .contSelect {
+  margin-top: 20px;
+  width: 80%;
+  align-self: center;
+}
+.render .container-pokemons {
   display: flex;
   flex-direction: column;
   align-items: center;
   margin-top: 20px;
 }
-.container-pokemons .grid {
+.render .container-pokemons .grid {
   display: grid;
   justify-items: center;
   grid-template-columns: 1fr;
   grid-gap: 25px;
 }
-.container-pokemons .btn {
+.render .container-pokemons .btn {
   background: #A8DADC;
   outline: none;
   border: none;
@@ -176,10 +187,6 @@ table {
   margin-top: 25px;
   max-width: 200px;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-}
-
-.render {
-  width: 100%;
 }
 
 .modalCont {

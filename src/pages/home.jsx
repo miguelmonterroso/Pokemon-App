@@ -36,15 +36,23 @@ export const Home = () => {
         getPoki()
     }, [])
 
+    const getPokemon = (value) => {
+      console.log(value.value);
+    }
+
     const CustomSelect = () => (
         <Select 
         options={all}
+        onChange={getPokemon}
         />
       )
+
     // Retornamos nuestro componente para renderizar cuando se ingrese a la url
     return (
         <div className='render'>
+          <div className='contSelect'>
             <CustomSelect/>
+          </div>
             <GetPokemons/>
         </div>
     )
