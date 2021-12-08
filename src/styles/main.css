@@ -110,10 +110,23 @@ table {
   font-weight: bold;
   margin-top: 20px;
 }
-.cardContainer .center img {
+.cardContainer .center .image-cont {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.cardContainer .center .image-cont .pokeima {
   width: 180px;
   -o-object-fit: cover;
      object-fit: cover;
+  z-index: 1;
+}
+.cardContainer .center .image-cont .background {
+  position: absolute;
+  width: 100%;
+  margin-top: 10px;
 }
 .cardContainer .center .btns {
   display: flex;

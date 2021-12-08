@@ -5,6 +5,7 @@ import React from 'react'
 import 'react-responsive-modal/styles.css';
 import { Modal } from 'react-responsive-modal';
 import ProgressBar from 'react-bootstrap/ProgressBar'
+import background from '../../images/backgroundpk.png'
 // Exportamos nuestra funcion CustomCard que recibe las props de la informacion que se
 // desea renderizar
 
@@ -37,7 +38,10 @@ export const CustomCard = (props) => {
         <div id={props.id} className='cardContainer'>
             <div className='center'>
                 <h2>{props.name}</h2>
-                <img src={props.image} alt="pokeImage" />
+                <div className='image-cont'>
+                <img className='pokeima' src={props.image} alt="pokeImage" />
+                <img className='background' src={background} alt="background" />
+                </div>
                 <Modal open={open} onClose={onCloseModal} classNames='espacio' center>
                     <div className='modalCont'>
                         <h2 className='modalName'>{props.name}</h2>
