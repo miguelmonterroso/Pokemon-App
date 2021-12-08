@@ -7,16 +7,20 @@
     margin-top: 20px;
     width: 80%;
     align-self: center;
+    .select{
+        z-index: 3;
+    }
 }
 .container-pokemons{
     display: flex;
     flex-direction: column;
     align-items: center;
     margin-top: 20px;
+
     .grid{
         display: grid;
         justify-items: center;
-        grid-template-columns:1fr;
+        grid-template-columns:1fr 1fr 1fr 1fr;
         grid-gap:25px; 
     }
     .btn{
@@ -31,6 +35,33 @@
         margin-top: 25px;
         max-width: 200px;
         box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    }
+    //For Laptop
+    @media only screen 
+    and (min-device-width: 1024px) 
+    and (max-device-width: 1439px) 
+    and (-webkit-min-device-pixel-ratio: 1) {
+        .grid{
+            grid-template-columns:1fr 1fr 1fr;
+        }
+    }
+    //For tablet
+    @media only screen 
+    and (min-device-width: 768px) 
+    and (max-device-width: 1023px) 
+    and (-webkit-min-device-pixel-ratio: 1) {
+        .grid{
+            grid-template-columns:1fr 1fr;
+        }
+    }
+    //For Mobile
+    @media only screen 
+    and (min-device-width: 320px) 
+    and (max-device-width: 767px) 
+    and (-webkit-min-device-pixel-ratio: 1) {
+        .grid{
+            grid-template-columns:1fr;
+        }
     }
 }
 }
@@ -66,6 +97,3 @@
     }
 }
 
-.select{
-    z-index: 3;
-}
