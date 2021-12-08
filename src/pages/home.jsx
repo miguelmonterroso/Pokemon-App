@@ -44,6 +44,7 @@ export const Home = () => {
         <Select 
         options={all}
         onChange={getPokemon}
+        className='select'
         />
       )
 
